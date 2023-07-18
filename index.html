@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+
+    <!-- CSS code -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 300px;
+            width: 400px;
+            border-radius: 10px;
+            background-color: rgb(162, 162, 162);
+        }
+        .container input{
+            font-size: 20px;
+            padding: 10px;
+            outline: none;
+            border: 0;
+            border-radius: 10px;
+        }
+        .container button{
+            padding: 10px 20px;
+            outline: none;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container -->
+
+    <div class="container">
+
+        <!-- Input and Button -->
+
+        <input type="text" placeholder="Enter Color Name or Code" id="input">
+        <button onclick="clicked()">Change Background</button>
+    </div>
+
+
+    <!-- JavaScript code -->
+    
+    <script>
+
+        let input = document.getElementById("input")
+
+        let body = document.querySelector("body")
+
+        function clicked(){
+            body.style.backgroundColor = input.value
+        }
+    </script>
+</body>
+</html>
